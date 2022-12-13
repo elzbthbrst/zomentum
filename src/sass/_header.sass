@@ -1,0 +1,77 @@
+.header
+    background: $color-blue 
+    background-blend-mode: luminosity  
+    grid-row: 2/3
+    grid-column: 1/-1
+    min-height: 53rem
+    
+
+    position: relative
+    display: grid
+    grid-template-rows: 1fr repeat(3, max-content) 1fr 
+    justify-items: center 
+    grid-gap: 1rem 
+    overflow: hidden 
+
+    @include respond (tab-land)
+        min-height: 53vh 
+        padding: 5rem 0
+    @include respond (tab-port)
+        min-height: 53vh 
+        padding: 5rem 0
+    @include respond (phone)
+        padding: 3rem 
+        
+    
+
+   
+    &__title
+        max-width: 62rem
+        grid-row: 2 / 3
+        text-align: center
+        z-index: 2
+         
+    &__paragraph
+        font-weight: 400
+        font-size: 1.6rem
+        max-width: 60rem 
+        color: $color-white
+        text-align: center 
+        line-height: 3rem
+        grid-row: 3 / 4
+        z-index: 2
+
+    &__btn 
+        grid-row: 4 / 5 
+        margin-top: 2rem 
+        a
+            z-index: 2
+
+
+    img
+       
+        mix-blend-mode: luminosity
+        position: absolute
+        @include respond (phone)
+            display: none 
+        
+        
+    &__people
+        left: 5% 
+        bottom: -5% 
+        @include respond (tab-land)
+            left: -6%
+            bottom: -5% 
+            opacity: .3
+        
+    &__stonks
+        top: 45%
+        left: 70% 
+        @include respond (tab-land)
+            bottom: 0 
+            right: 0
+        @include respond (tab-port)
+            bottom: 0 
+            right: 0
+            
+    // url(../img/stonks.svg) 70% 45% / auto auto no-repeat

@@ -1,0 +1,46 @@
+.features
+    
+    grid-row: 3/4
+    grid-column: 3/4
+    padding-top: 8rem
+    padding-bottom: 14rem 
+    @include respond (tab-port)
+        grid-column: 2/5
+    @include respond (phone)
+        padding-bottom: 8rem 
+    &__title
+        text-align: center
+        transition: all .5s 
+        &:hover
+           transform: scale(1.1) 
+           color: $color-blue
+
+
+    &__cards
+        display: flex
+        justify-content: space-around 
+        margin-top: 2rem
+        flex-wrap: wrap 
+
+
+    &__card
+        display: flex
+        flex-direction: column 
+        align-items: center 
+        margin-top: 2rem 
+        max-width: 25rem 
+        
+        transition: all .5s 
+        &:hover
+            transform: scale(1.1)
+            
+    &__img
+        width: 10rem
+        height: 10rem 
+    &__text
+        margin-top: 2.4rem 
+        font-weight: 400
+        font-size: 1.6rem
+        line-height: 2.7rem
+        text-align: center 
+

@@ -1,0 +1,48 @@
+.cards
+    grid-row: 4/5
+    grid-column: 3/4
+    padding: 0 3.9rem 12rem 3.9rem 
+
+    display: grid
+    grid-template-columns: repeat(2, minmax(20vw, 1fr))
+    grid-auto-rows: auto 
+    grid-gap: 16rem 
+    justify-items: center
+    align-items: center
+    
+    @include respond (tab-land)
+        grid-gap: 7rem 
+        grid-column: 2/5  
+        padding: 0 3.9rem 5rem 3.9rem  
+    @include respond (phone)
+        grid-template-columns: 1fr 
+        grid-gap: 3rem 
+        justify-items: left 
+        padding: 3rem 0 
+    &__text
+        
+        padding: 0 2rem 
+        
+    &__title
+         
+    &__paragraph
+        font-weight: 400
+        font-size: 1.6rem
+        color: $color-text-small
+        line-height: 2.7rem
+    &__link
+
+        font-weight: 300
+        font-size: 1.6rem
+        color: $color-blue
+        line-height: 2.8rem
+        a
+            &:hover
+            transform: scale(1.1) 
+
+    &__img
+        display: inline-block 
+        object-fit: cover 
+        @include respond (phone)
+            display: none 
+    

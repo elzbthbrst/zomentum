@@ -1,0 +1,71 @@
+$color-blue: #2F70FE
+$color-black: #000000
+$color-white: #FFFFFF
+$color-text-small: #000C2D
+$color-text-big: #181818 
+    
+
+@mixin respond($breakpoint)
+    @if $breakpoint == phone 
+        @media only screen and ( max-width: 560px)
+            @content
+
+    @if $breakpoint == tab-port 
+        @media only screen and ( max-width: 790px)
+            @content
+    
+    @if $breakpoint == tab-land
+        @media only screen and ( max-width: 1050px)
+            @content
+
+    @if $breakpoint == big-screen
+        @media only screen and ( min-width: 1441px)
+            @content
+    
+body 
+    padding: 0
+    margin: 0  
+    font-family: Roboto, serif
+    
+    a
+        box-sizing: border-box 
+        text-decoration: none 
+    h1,h2,h3, h4, p 
+        padding: 0
+        margin: 0 
+    
+
+html
+    font-size: 62.5% 
+    @include respond (tab-port)
+        font-size: 50% 
+   
+    
+    // @include respond (phone)
+    //     font-size: 40% 
+
+
+.wrapper
+    max-width: 144rem
+    margin: 0 auto
+    
+   
+.container
+    max-width: 144rem
+    margin: 0 auto
+     
+    
+    display: grid
+    grid-template-rows: 8rem max-content repeat(3, min-content)
+    grid-template-columns: minmax(1rem, 1fr) minmax(14rem, 2fr)  minmax(min-content, 68vw) minmax(14rem, 2fr) minmax(1rem, 1fr)
+    background: $color-white
+    @include respond (big-screen)
+        grid-template-columns: 7rem 14rem 100rem 14rem 7rem     
+        
+    
+    
+    
+
+
+
+

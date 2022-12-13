@@ -1,0 +1,70 @@
+.footer
+    background-color: $color-black
+    grid-row: 5/-1
+    grid-column: 1/-1 
+    padding: 8rem 0
+    @include respond (phone) 
+        padding: 4rem 0
+    &__container
+        max-width: 68vw
+        margin: 0 auto
+        @include respond (tab-land)
+            max-width: 83vw
+    &__nav
+         
+        display: flex 
+        justify-content: space-between 
+        @include respond (phone)
+            display: block 
+            text-align: center 
+            
+            
+    &__column
+        @include respond (phone)
+            &:not(:first-child)
+                margin-top: 1rem 
+    &__title
+        color: $color-white
+        font-weight: 700
+        font-size: 1.6rem
+        line-height: 1.8rem 
+        @include respond (phone)
+            font-size: 2rem
+
+
+    &__list
+        margin: 0
+        padding: 2.4rem 0 0 0
+        text-decoration: none 
+        @include respond (phone)
+            display: none 
+        
+    &__item
+        display: block
+        &:not(:first-child)
+            margin-top: 1rem 
+            
+
+    &__link
+        color: $color-white
+        font-weight: 400
+        font-size: 1.4rem
+        line-height: 1.8rem 
+        
+    &__end
+        margin-top: 6rem 
+        display: flex 
+        justify-content: space-between 
+        @include respond (phone)
+            justify-content: center
+            margin-top: 3rem  
+        a
+            color: $color-white
+            font-weight: 400
+            font-size: 1.4rem
+            line-height: 1.8rem  
+    &__about
+
+    &__social
+        @include respond (phone)
+            display: none 
